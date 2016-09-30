@@ -45,8 +45,9 @@ do
 done
 
 #if you want to do the garbage collection which finally cleans up your filesystem in this script just put this script into a cronjob which runs in the night when your registry is not used!
-#for that you will need the following 3 lines:
+#for that you will need the following 4 lines (to avoid problem restart of docker-registry is required after garbage collection):
 
 #REGISTRY_CONTAINER_ID="docker-registry"
 #REGISTRY_CONFIG="/etc/docker/registry/config.yml"
 #docker exec -it "${REGISTRY_CONTAINER_ID}" bin/registry garbage-collect "${REGISTRY_CONFIG}"
+#docker restart "${REGISTRY_CONTAINER_ID}"
