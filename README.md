@@ -2,10 +2,10 @@
 The Docker Registry Garbage Collector is a small script which allows you to clean up your registry v2.
 
 # Dependencies
-On the machine where the script is running, should be installed the following components:
-- curl
-- jq
-- awk
+On the machine where the script is running, should be installed the following components (tested with given versions):
+ - curl 7.29.0
+ - jq-1.5
+ - Awk 4.0.2
 
 # Howto use
 
